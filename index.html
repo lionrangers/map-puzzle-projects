@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Kickstarter Project</title>
+    <title>Map Puzzles - Kickstarter Projects</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,17 +14,31 @@
             margin-top: 50px;
         }
         img {
-            max-width: 100%;
+            max-width: 30%;
             height: auto;
+            padding: 5px;
+        }
+        .project {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Kickstarter Project</h1>
-        <p>Introduction</p>
-        <!-- 替换图片链接 -->
-        <img src="微信图片_20230920224636.jpg" alt="Kickstarter Project Image">
+        <h1>Map Puzzles - Kickstarter Projects</h1>
+        <p>Click on a project below to learn more about it.</p>
+        <!-- Project 1 -->
+        <img class="project" src="project-image-1.jpg" alt="Kickstarter Project Image 1" onclick="location.href='https://www.kickstarter.com/project1';">
+        <!-- Additional projects placeholders -->
+        <!-- Project 2 -->
+        <img class="project" src="project-image-2.jpg" alt="Kickstarter Project Image 2" onclick="location.href='https://www.kickstarter.com/project2';">
+        <!-- Project 3 -->
+        <img class="project" src="project-image-3.jpg" alt="Kickstarter Project Image 3" onclick="location.href='https://www.kickstarter.com/project3';">
+        <!-- Add more projects as needed -->
     </div>
 </body>
 </html>
