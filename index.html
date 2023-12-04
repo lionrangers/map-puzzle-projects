@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,17 +12,33 @@
         .container {
             margin-top: 50px;
         }
-        img {
-            max-width: 30%;
-            height: auto;
-            padding: 5px;
+        .project-img {
+            width: 300px;  /* Set image width */
+            height: 300px; /* Set image height */
+            object-fit: cover; /* This will cover the area without stretching the image */
+            border: 1px solid #ccc; /* Optional: adds a border around the image */
+            margin-bottom: 10px; /* Space between image and title */
         }
-        .project {
-            cursor: pointer;
-            transition: transform 0.3s ease;
+        .project-title {
+            margin-bottom: 20px; /* Space after the title */
         }
-        .project:hover {
-            transform: scale(1.05);
+        .coming-soon {
+            position: relative;
+            display: inline-block;
+        }
+        .coming-soon::after {
+            content: 'Coming Soon';
+            color: white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -32,13 +47,16 @@
         <h1>Map Puzzles - Kickstarter Projects</h1>
         <p>Click on a project below to learn more about it.</p>
         <!-- Project 1 -->
-        <img class="project" src="canada.png" alt=" Puzzle Close to Home Our Canadian Journey in Pieces" onclick="location.href='https://www.kickstarter.com/projects/puzzle-canadamap/a-puzzle-close-to-home-our-canadian-journey-in-pieces?ref=discovery&term=puzzle';">
-        <!-- Additional projects placeholders -->
-        <!-- Project 2 -->
-        <img class="project" src="bering.png" alt="Mysteries of the Bering Strait A Seafloor Odyssey" onclick="location.href='https://www.kickstarter.com/project2';">
-        <!-- Project 3 -->
-        <img class="project" src="tibetan.png" alt="Mystic Highlands of the Tibetan Plateau" onclick="location.href='https://www.kickstarter.com/project3';">
-        <!-- Add more projects as needed -->
+        <div>
+            <img class="project-img" src="canada.png" alt="Puzzle Close to Home Our Canadian Journey in Pieces">
+            <div class="project-title">Puzzle Close to Home</div>
+        </div>
+        <!-- Project 2 with Coming Soon stamp -->
+        <div class="coming-soon">
+            <img class="project-img" src="bering.png" alt="Mysteries of the Bering Strait">
+            <!-- The title is not displayed for coming soon projects -->
+        </div>
+        <!-- Additional projects can be added following the same pattern -->
     </div>
 </body>
 </html>
